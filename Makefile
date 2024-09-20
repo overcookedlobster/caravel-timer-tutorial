@@ -36,10 +36,8 @@ USER_ARGS = -u $$(id -u $$USER):$$(id -g $$USER)
 ifeq ($(ROOTLESS), 1)
 	USER_ARGS =
 endif
-export OPENLANE_ROOT?=~/asic/openlane
-# export OPENLANE_ROOT?=$(PWD)/openlane
-export PDK_ROOT?=~/asic/pdk
-# export PDK_ROOT?=$(PWD)/dependencies/pdks
+export OPENLANE_ROOT?=$(PWD)/dependencies/openlane_src
+export PDK_ROOT?=$(PWD)/dependencies/pdks
 export DISABLE_LVS?=0
 
 export ROOTLESS
